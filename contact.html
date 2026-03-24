@@ -39,18 +39,6 @@
             border-color: #a855f7;
             background: rgba(255, 255, 255, 0.1);
         }
-        .back-link {
-            margin-top: 1rem;
-            color: var(--text-secondary);
-            text-decoration: none;
-            font-size: 0.9rem;
-            transition: color 0.2s;
-            opacity: 0.8;
-        }
-        .back-link:hover {
-            color: #ec4899;
-            opacity: 1;
-        }
         textarea {
             resize: vertical;
             min-height: 120px;
@@ -58,11 +46,20 @@
     </style>
 </head>
 <body>
-    <button id="theme-toggle" class="theme-toggle" aria-label="테마 변경">
-        <svg id="theme-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-        </svg>
-    </button>
+    <nav class="navbar">
+        <a href="index.html" class="nav-logo">럭키 식스</a>
+        <div class="nav-links">
+            <a href="index.html" class="nav-link">홈</a>
+            <a href="guide.html" class="nav-link">가이드</a>
+            <a href="about.html" class="nav-link">소개</a>
+            <a href="contact.html" class="nav-link">문의</a>
+            <button id="theme-toggle" class="theme-toggle" aria-label="테마 변경">
+                <svg id="theme-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                </svg>
+            </button>
+        </div>
+    </nav>
 
     <div class="container glass-panel">
         <h1 class="title">문의하기</h1>
@@ -82,9 +79,16 @@
                 <div class="btn-glow"></div>
             </button>
         </form>
-
-        <a href="index.html" class="back-link">← 메인으로 돌아가기</a>
     </div>
+
+    <footer class="footer">
+        <div class="footer-links">
+            <a href="about.html" class="footer-link">소개</a>
+            <a href="privacy.html" class="footer-link">개인정보처리방침</a>
+            <a href="contact.html" class="footer-link">문의하기</a>
+        </div>
+        <p class="footer-copy">&copy; 2026 럭키 식스. All rights reserved.</p>
+    </footer>
 
     <script src="script.js"></script>
 </body>

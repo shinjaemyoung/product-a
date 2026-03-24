@@ -3,16 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>프리미엄 로또 번호 생성기</title>
-    <meta name="description" content="글래스모피즘 디자인이 적용된 예쁜 로또 번호 생성기">
+    <title>럭키 식스 - 프리미엄 로또 번호 생성기</title>
+    <meta name="description" content="글래스모피즘 디자인이 적용된 예쁜 로또 번호 생성기. 오늘 당신의 행운 번호를 확인해보세요.">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <button id="theme-toggle" class="theme-toggle" aria-label="테마 변경">
-        <svg id="theme-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-        </svg>
-    </button>
+    <nav class="navbar">
+        <a href="index.html" class="nav-logo">럭키 식스</a>
+        <div class="nav-links">
+            <a href="index.html" class="nav-link">홈</a>
+            <a href="guide.html" class="nav-link">가이드</a>
+            <a href="about.html" class="nav-link">소개</a>
+            <a href="contact.html" class="nav-link">문의</a>
+            <button id="theme-toggle" class="theme-toggle" aria-label="테마 변경">
+                <svg id="theme-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                </svg>
+            </button>
+        </div>
+    </nav>
+
     <div class="container glass-panel">
         <h1 class="title">럭키 식스</h1>
         <p class="subtitle">오늘의 행운 번호를 뽑아보세요!</p>
@@ -25,31 +35,42 @@
             <span class="btn-text">번호 생성하기</span>
             <div class="btn-glow"></div>
         </button>
-        
-        <a href="contact.html" style="margin-top: 1rem; color: var(--text-secondary); text-decoration: none; font-size: 0.85rem; opacity: 0.7;">문의하기</a>
+    </div>
 
-        <div class="comments-container" style="width: 100%; border-top: 1px solid var(--panel-border); margin-top: 2rem; padding-top: 2rem;">
-            <div id="disqus_thread"></div>
-            <script>
-                /**
-                *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-                *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
-                /*
-                var disqus_config = function () {
-                this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
-                this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-                };
-                */
-                (function() { // DON'T EDIT BELOW THIS LINE
-                var d = document, s = d.createElement('script');
-                s.src = 'https://shinjae.disqus.com/embed.js';
-                s.setAttribute('data-timestamp', +new Date());
-                (d.head || d.body).appendChild(s);
-                })();
-            </script>
-            <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <div class="article-section glass-panel">
+        <h2 class="article-title">럭키 식스와 함께하는 행운의 시작</h2>
+        <div class="article-content">
+            <p>럭키 식스는 사용자들에게 가장 직관적이고 아름다운 방식으로 로또 번호를 제공하기 위해 설계되었습니다. 우리는 단순한 무작위 추출을 넘어, 사용자가 번호를 확인하는 과정 자체에서 즐거움을 느낄 수 있도록 세심하게 디자인했습니다.</p>
+            
+            <h3>번호 생성 알고리즘 안내</h3>
+            <p>럭키 식스의 번호 생성기는 자바스크립트의 암호학적으로 안전한 난수 생성 방식에 근거하여 작동합니다. 1부터 45까지의 모든 숫자는 동일한 확률로 선택되며, 어떠한 인위적인 조작이나 패턴도 개입되지 않습니다. 오직 당신의 운에 맡겨보세요.</p>
+            
+            <h3>이용 시 주의사항</h3>
+            <p>본 서비스에서 제공하는 번호는 오직 참고용이며, 실제 당첨을 보장하지 않습니다. 복권 구매는 만 19세 이상부터 가능하며, 자신의 경제적 여건에 맞는 건전한 구매 계획을 세우는 것이 중요합니다.</p>
         </div>
     </div>
+
+    <div class="comments-container glass-panel" style="width: 90%; max-width: 800px; margin-top: 2rem; padding: 2rem;">
+        <div id="disqus_thread"></div>
+        <script>
+            (function() {
+            var d = document, s = d.createElement('script');
+            s.src = 'https://shinjae.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+            })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-links">
+            <a href="about.html" class="footer-link">소개</a>
+            <a href="privacy.html" class="footer-link">개인정보처리방침</a>
+            <a href="contact.html" class="footer-link">문의하기</a>
+        </div>
+        <p class="footer-copy">&copy; 2026 럭키 식스. All rights reserved.</p>
+    </footer>
 
     <script src="script.js"></script>
 </body>
