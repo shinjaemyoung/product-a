@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Pretendard:wght@400;600;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Pretendard', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%);
+    overflow: hidden;
+    position: relative;
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(139,92,246,0.5) 0%, rgba(0,0,0,0) 70%);
+    top: -100px;
+    left: -100px;
+    border-radius: 50%;
+    filter: blur(40px);
+}
+
+body::after {
+    content: '';
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, rgba(236,72,153,0.4) 0%, rgba(0,0,0,0) 70%);
+    bottom: -50px;
+    right: -50px;
+    border-radius: 50%;
+    filter: blur(40px);
+}
+
+.container {
+    position: relative;
+    z-index: 10;
+    width: 90%;
+    max-width: 500px;
+    padding: 2.5rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.glass-panel {
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 24px;
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+}
+
+.title {
+    color: #ffffff;
+    font-size: 2.5rem;
+    font-weight: 800;
+    text-align: center;
+    background: linear-gradient(to right, #a855f7, #ec4899);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 0.5rem;
+}
+
+.subtitle {
+    color: #94a3b8;
+    font-size: 1rem;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.balls-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    min-height: 80px;
+    width: 100%;
+    perspective: 1000px;
+}
+
+.placeholder {
+    color: #64748b;
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+    height: 60px;
+}
+
+.lotto-ball {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: white;
+    box-shadow: 
+        inset -5px -5px 15px rgba(0,0,0,0.3),
+        inset 5px 5px 15px rgba(255,255,255,0.4),
+        0 10px 20px rgba(0,0,0,0.3);
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+    opacity: 0;
+    transform: rotateY(-90deg) scale(0.5);
+    animation: popIn 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
+@keyframes popIn {
+    to {
+        opacity: 1;
+        transform: rotateY(0) scale(1);
+    }
+}
+
+.ball-yellow { background: linear-gradient(135deg, #fcd34d 0%, #d97706 100%); }
+.ball-blue { background: linear-gradient(135deg, #60a5fa 0%, #2563eb 100%); }
+.ball-red { background: linear-gradient(135deg, #f87171 0%, #dc2626 100%); }
+.ball-gray { background: linear-gradient(135deg, #9ca3af 0%, #4b5563 100%); }
+.ball-green { background: linear-gradient(135deg, #34d399 0%, #059669 100%); }
+
+.generate-btn {
+    position: relative;
+    background: linear-gradient(135deg, #8b5cf6 0%, #ec4899 100%);
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 9999px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    overflow: hidden;
+    transition: transform 0.2s, box-shadow 0.2s;
+    width: 100%;
+    max-width: 300px;
+    margin-top: 1rem;
+}
+
+.generate-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px -5px rgba(236, 72, 153, 0.5);
+}
+
+.generate-btn:active {
+    transform: translateY(1px);
+}
+
+.btn-text {
+    position: relative;
+    z-index: 2;
+}
+
+.btn-glow {
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,0.3) 50%, rgba(255,255,255,0) 100%);
+    transform: skewX(-20deg);
+    z-index: 1;
+}
+
+.generate-btn:hover .btn-glow {
+    animation: shine 1.5s infinite;
+}
+
+@keyframes shine {
+    0% { left: -100%; }
+    100% { left: 200%; }
+}
