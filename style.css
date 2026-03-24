@@ -33,11 +33,19 @@
 body {
     min-height: 100vh;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: flex-start;
     align-items: center;
     background: var(--bg-gradient);
-    overflow: hidden;
+    overflow-y: auto;
     position: relative;
+    padding: 4rem 1rem;
+}
+
+.comments-container {
+    width: 100%;
+    margin-top: 2rem;
+    padding: 1.5rem;
 }
 
 body::before {
